@@ -8,6 +8,9 @@ angular.module 'registerUserApp'
     $scope.awesomeThings = awesomeThings
     socket.syncUpdates 'thing', $scope.awesomeThings
 
+  $http.post '/api/things',
+    name: "YoYoYo"
+
   $scope.addThing = ->
     return if $scope.newThing is ''
     $http.post '/api/things',
